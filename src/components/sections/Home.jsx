@@ -8,13 +8,11 @@ export const Home = () => {
             id="home"
             className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden"
         >
-            {/* Animated Background */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]"></div>
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f46e5,#7c3aed,#ec4899)] opacity-10"></div>
             </div>
 
-            {/* Animated Orbs */}
             <div className="absolute inset-0 overflow-hidden">
                 <motion.div
                     animate={{
@@ -58,7 +56,6 @@ export const Home = () => {
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-4xl mx-auto text-center">
-                    {/* Welcome Badge */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -70,7 +67,6 @@ export const Home = () => {
                         </span>
                     </motion.div>
 
-                    {/* Main Heading */}
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -86,7 +82,6 @@ export const Home = () => {
                         </span>
                     </motion.h1>
 
-                    {/* Subheading */}
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -96,7 +91,6 @@ export const Home = () => {
                         A passionate Full Stack Developer crafting beautiful and functional web experiences
                     </motion.p>
 
-                    {/* Tech Stack */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -129,7 +123,6 @@ export const Home = () => {
                         ))}
                     </motion.div>
 
-                    {/* Social Links */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -145,7 +138,7 @@ export const Home = () => {
                             {
                                 icon: <Linkedin className="w-5 h-5" />,
                                 label: 'LinkedIn',
-                                href: 'https://www.linkedin.com/in/ramdeni-akshith/',
+                                href: 'https://www.linkedin.com/in/ramdeni-akshith-b96b01203',
                             },
                             {
                                 icon: <Mail className="w-5 h-5" />,
@@ -171,7 +164,6 @@ export const Home = () => {
                         ))}
                     </motion.div>
 
-                    {/* CTA Button */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -191,7 +183,6 @@ export const Home = () => {
                 </div>
             </div>
 
-            {/* Scroll Indicator */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

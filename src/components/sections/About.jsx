@@ -207,7 +207,7 @@ export const About = () => {
                                         <li className="flex items-start gap-2">
                                             <span className="text-blue-400">•</span>
                                             <span>
-                                                Successfully earned over $50K through various freelance projects
+                                                Successfully earned over $20K through various freelance projects
                                             </span>
                                         </li>
                                         <li className="flex items-start gap-2">

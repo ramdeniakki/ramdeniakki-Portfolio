@@ -10,7 +10,6 @@ export const Projects = () => {
                         Featured Projects
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* Project 1 - OMSSC */}
                         <motion.div
                             className="p-6 rounded-xl border border-gray-700/50 hover:shadow-2xl transition-all bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm relative group"
                             whileHover={{ scale: 1.02 }}
@@ -56,7 +55,6 @@ export const Projects = () => {
                             </div>
                         </motion.div>
 
-                        {/* Project 2 - TuneCraft */}
                         <motion.div
                             className="p-6 rounded-xl border border-gray-700/50 hover:shadow-2xl transition-all bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm relative group"
                             whileHover={{ scale: 1.02 }}
@@ -99,7 +97,6 @@ export const Projects = () => {
                             </div>
                         </motion.div>
 
-                        {/* Project 3 - Chat Application */}
                         <motion.div
                             className="p-6 rounded-xl border border-gray-700/50 hover:shadow-2xl transition-all bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm relative group"
                             whileHover={{ scale: 1.02 }}
@@ -141,7 +138,6 @@ export const Projects = () => {
                             </div>
                         </motion.div>
 
-                        {/* Project 4 - Draw App */}
                         <motion.div
                             className="p-6 rounded-xl border border-gray-700/50 hover:shadow-2xl transition-all bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm relative group"
                             whileHover={{ scale: 1.02 }}
@@ -204,7 +200,7 @@ export const Projects = () => {
                                     reporting features.
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    {['React', 'Node.js', 'MongoDB', 'Express'].map((tech, key) => (
+                                    {[].map((tech, key) => (
                                         <motion.span
                                             key={key}
                                             className="bg-green-600/20 text-green-400 py-1.5 px-3 rounded-full text-sm hover:bg-green-500/30 hover:shadow-[0_0_15px_rgba(34,197,94,0.2)] transition-all"
