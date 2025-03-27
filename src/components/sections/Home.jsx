@@ -1,91 +1,217 @@
-import { motion } from "framer-motion";
-import { Github, Linkedin } from "lucide-react";
-import { RevealOnScroll } from "../RevealOnScroll";
+import { motion } from 'framer-motion'
+import { RevealOnScroll } from '../../components/RevealOnScroll'
+import { Github, Linkedin, Mail, ArrowRight, Code2, Cpu, Database, Server } from 'lucide-react'
 
 export const Home = () => {
-  return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative px-6 bg-gradient-to-br from-gray-900 via-black to-gray-900"
-    >
-      <RevealOnScroll>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl mx-auto"
+    return (
+        <section
+            id="home"
+            className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden"
         >
-
-          <div className="text-center md:text-left z-10 px-4">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
-              Hi, I'm Akki
-            </h1>
-
-            <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto md:mx-0">
-              I’m a full-stack developer who loves crafting clean, scalable web
-              applications. My goal is to build solutions that offer both
-              exceptional performance and a delightful user experience.
-            </p>
-
-            <div className="flex justify-center md:justify-start space-x-4">
-              <a
-                href="#projects"
-                className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white py-3 px-6 rounded-full font-medium transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
-              >
-                View Projects
-              </a>
-
-              <a
-                href="#contact"
-                className="border-2 border-blue-500 text-blue-500 py-3 px-6 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:bg-blue-500 hover:text-white hover:shadow-xl"
-              >
-                Contact Me
-              </a>
-
-              <a
-                href="https://drive.google.com/file/d/1jLk9A47zVUNx8928D2heF3pE8OHZVpZ1/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-cyan-500 text-cyan-500 py-3 px-6 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:bg-cyan-500 hover:text-white hover:shadow-xl"
-              >
-                Resume
-              </a>
+            {/* Animated Background */}
+            <div className="absolute inset-0">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]"></div>
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f46e5,#7c3aed,#ec4899)] opacity-10"></div>
             </div>
-          </div>
 
-
-          <div className="mt-8 md:mt-0 md:w-1/2 flex flex-col items-center">
-            <motion.img
-              src="https://avatars.githubusercontent.com/u/117385626?v=4"
-              alt="Akshith's Profile"
-              className="w-48 h-48 md:w-60 md:h-60 rounded-full border-4 border-blue-500 shadow-lg"
-              animate={{ y: [0, -5, 0] }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-            />
-
-
-            <div className="flex space-x-6 mt-4">
-              <a
-                href="https://github.com/ramdeniakki"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition duration-300"
-              >
-                <Github size={32} />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/ramdeni-akshith-b96b01203/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition duration-300"
-              >
-                <Linkedin size={32} />
-              </a>
+            {/* Animated Orbs */}
+            <div className="absolute inset-0 overflow-hidden">
+                <motion.div
+                    animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                    }}
+                    className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"
+                />
+                <motion.div
+                    animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                        delay: 2,
+                    }}
+                    className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
+                />
+                <motion.div
+                    animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                        delay: 4,
+                    }}
+                    className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"
+                />
             </div>
-          </div>
-        </motion.div>
-      </RevealOnScroll>
-    </section>
-  );
-};
+
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="max-w-4xl mx-auto text-center">
+                    {/* Welcome Badge */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="mb-8"
+                    >
+                        <span className="inline-block px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm text-sm font-medium text-gray-300 border border-white/10">
+                            Welcome to my portfolio
+                        </span>
+                    </motion.div>
+
+                    {/* Main Heading */}
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="text-5xl md:text-7xl font-bold mb-6"
+                    >
+                        Hi, I'm{' '}
+                        <span className="relative inline-block">
+                            <span className="relative z-10 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                                Ramdeni Akshith
+                            </span>
+                            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        </span>
+                    </motion.h1>
+
+                    {/* Subheading */}
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto"
+                    >
+                        A passionate Full Stack Developer crafting beautiful and functional web experiences
+                    </motion.p>
+
+                    {/* Tech Stack */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                        className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+                    >
+                        {[
+                            { icon: <Code2 className="w-6 h-6 text-indigo-400" />, label: 'Frontend', href: '#about' },
+                            { icon: <Cpu className="w-6 h-6 text-purple-400" />, label: 'Backend', href: '#about' },
+                            { icon: <Database className="w-6 h-6 text-pink-400" />, label: 'Database', href: '#about' },
+                            { icon: <Server className="w-6 h-6 text-rose-400" />, label: 'DevOps', href: '#about' },
+                        ].map((tech, index) => (
+                            <motion.a
+                                key={tech.label}
+                                href={tech.href}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                                className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group"
+                                whileHover={{ scale: 1.05, y: -2 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <div className="p-3 rounded-full bg-white/5 group-hover:bg-white/10 transition-colors">
+                                    {tech.icon}
+                                </div>
+                                <span className="text-sm text-gray-400 group-hover:text-white transition-colors">
+                                    {tech.label}
+                                </span>
+                            </motion.a>
+                        ))}
+                    </motion.div>
+
+                    {/* Social Links */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 1.2 }}
+                        className="flex flex-wrap justify-center gap-4 mb-12"
+                    >
+                        {[
+                            {
+                                icon: <Github className="w-5 h-5" />,
+                                label: 'GitHub',
+                                href: 'https://github.com/ramdeniakki',
+                            },
+                            {
+                                icon: <Linkedin className="w-5 h-5" />,
+                                label: 'LinkedIn',
+                                href: 'https://www.linkedin.com/in/ramdeni-akshith/',
+                            },
+                            {
+                                icon: <Mail className="w-5 h-5" />,
+                                label: 'Contact',
+                                href: 'mailto:ramdeniakshith@gmail.com',
+                            },
+                        ].map((social, index) => (
+                            <motion.a
+                                key={social.label}
+                                href={social.href}
+                                target={social.label !== 'Contact' ? '_blank' : undefined}
+                                rel={social.label !== 'Contact' ? 'noopener noreferrer' : undefined}
+                                className="group flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 transition-all duration-300"
+                                whileHover={{ scale: 1.05, y: -2 }}
+                                whileTap={{ scale: 0.95 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
+                            >
+                                {social.icon}
+                                <span>{social.label}</span>
+                            </motion.a>
+                        ))}
+                    </motion.div>
+
+                    {/* CTA Button */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 1.6 }}
+                        className="flex justify-center"
+                    >
+                        <motion.a
+                            href="#about"
+                            className="group flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-medium hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300"
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <span>Explore My Work</span>
+                            <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                        </motion.a>
+                    </motion.div>
+                </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2 }}
+                className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            >
+                <div className="w-6 h-10 border-2 border-white/20 rounded-full p-1">
+                    <motion.div
+                        animate={{
+                            y: [0, 12, 0],
+                        }}
+                        transition={{
+                            duration: 1.5,
+                            repeat: Infinity,
+                            repeatType: 'loop',
+                        }}
+                        className="w-1.5 h-1.5 bg-white rounded-full mx-auto"
+                    />
+                </div>
+            </motion.div>
+        </section>
+    )
+}
