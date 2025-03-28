@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { RevealOnScroll } from '../../components/RevealOnScroll'
-import { Github, Linkedin, Mail, ArrowRight, Code2, Cpu, Database, Server } from 'lucide-react'
+import { Github, Linkedin, Mail, ArrowRight, Code2, Cpu, Database, Server, FileText } from 'lucide-react'
 
 export const Home = () => {
     return (
@@ -168,7 +168,7 @@ export const Home = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 1.6 }}
-                        className="flex justify-center"
+                        className="flex justify-center gap-4"
                     >
                         <motion.a
                             href="#about"
@@ -178,6 +178,17 @@ export const Home = () => {
                         >
                             <span>Explore My Work</span>
                             <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                        </motion.a>
+                        <motion.a
+                            href="https://drive.google.com/file/d/1twh3e81dcIMA-TJoMQO5U-vvSO8jX6gl/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-2 px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 text-white font-medium transition-all duration-300"
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <FileText className="w-5 h-5" />
+                            <span>View Resume</span>
                         </motion.a>
                     </motion.div>
                 </div>
